@@ -1,0 +1,31 @@
+{
+  "name": "botkit-storage-pg",
+  "version": "0.1.0",
+  "description": "Postgres storage driver for botkit",
+  "main": "src/index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rush1506/botkit-storage-pg.git"
+  },
+  "keywords": [
+    "botkit",
+    "postgres",
+    "botkit-storage"
+  ],
+  "author": "Vu Thanh Tam <vuthanhtam@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rush1506/botkit-storage-pg/issues"
+  },
+  "homepage": "https://github.com/rush1506/botkit-storage-pg.git",
+  "dependencies": {
+    "pg": "^7.4.3"
+  },
+  "engines": {
+    "node": ">=8.0"
+  },
+  "devDependencies": {
+  }
+}
