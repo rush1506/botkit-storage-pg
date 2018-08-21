@@ -1,7 +1,7 @@
 const { Pool} = require('pg')
 
 function escapeSpecialCharacters(string) {
-  return string.replace(/'/g, "\\'");
+  return string.replace(/'/g, "\\\\'");
 }
 
 
