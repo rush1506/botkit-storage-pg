@@ -1,9 +1,5 @@
 const { Pool} = require('pg')
 
-function escapeSpecialCharacters(string) {
-  return string.replace(/'/g, "\'");
-}
-
 
 function genInsertQuery(statement, data) {
   let query = statement;
@@ -61,11 +57,10 @@ module.exports = function (config) {
   var saveTeam = function (tableName) {
     return function (data, callback) {
       var getTeam = get('botkit_team', dbToTeamJson);
-      var team_name = escapeSpecialCharacters(data.name);
       var dataToSave = [
         {key: 'id', value:  "'" + data.id + "'"},
         {key: 'createdBy', value:  "'" + data.createdBy + "'"},
-        {key: 'name', value:  "'" + team_name + "'"},
+        {key: 'name', value:  "'" + JSON.stringify(data.name) + "'"},
         {key: 'url', value:  "'" + data.url + "'"},
         {key: 'token', value:  "'" + data.token + "'"},
         {key: 'bot', value:  "'" + JSON.stringify(data.bot) + "'"},
