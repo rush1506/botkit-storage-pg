@@ -60,7 +60,7 @@ module.exports = function (config) {
       var dataToSave = [
         {key: 'id', value:  "'" + data.id + "'"},
         {key: 'createdBy', value:  "'" + data.createdBy + "'"},
-        {key: 'name', value:  "'" + JSON.stringify(data.name) + "'"},
+        {key: 'name', value:  JSON.stringify(data.name)},
         {key: 'url', value:  "'" + data.url + "'"},
         {key: 'token', value:  "'" + data.token + "'"},
         {key: 'bot', value:  "'" + JSON.stringify(data.bot) + "'"},
