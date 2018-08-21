@@ -1,6 +1,6 @@
 {
   "name": "botkit-storage-pg",
-  "version": "0.1.9.1",
+  "version": "0.2.0",
   "description": "Postgres storage driver for botkit",
   "main": "src/index.js",
   "scripts": {},
